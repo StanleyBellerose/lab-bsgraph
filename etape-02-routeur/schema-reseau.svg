@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" font-family="Helvetica, Arial, sans-serif">
+  <rect width="960" height="420" fill="#0f172a"/>
+  <text x="480" y="40" fill="#f8fafc" font-size="22" font-weight="700" text-anchor="middle">BSGRAPH Studio — Étape 2 : routeur / NAT / DHCP</text>
+
+  <!-- Zones -->
+  <rect x="30" y="80" width="250" height="300" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text x="155" y="108" fill="#94a3b8" font-size="13" text-anchor="middle" letter-spacing="2">WAN · NAT VIRTUALBOX</text>
+  <rect x="640" y="80" width="290" height="300" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text x="785" y="108" fill="#94a3b8" font-size="13" text-anchor="middle" letter-spacing="2">LAN-BSGRAPH · 192.168.10.0/24</text>
+
+  <!-- Internet -->
+  <ellipse cx="155" cy="190" rx="85" ry="42" fill="#334155" stroke="#64748b"/>
+  <text x="155" y="196" fill="#f8fafc" font-size="18" font-weight="700" text-anchor="middle">Internet</text>
+  <text x="155" y="300" fill="#cbd5e1" font-size="13" text-anchor="middle">Passerelle VirtualBox</text>
+  <text x="155" y="320" fill="#cbd5e1" font-size="13" text-anchor="middle">10.0.2.2</text>
+  <line x1="155" y1="232" x2="155" y2="280" stroke="#64748b" stroke-width="2" stroke-dasharray="5 5"/>
+
+  <!-- Router -->
+  <rect x="345" y="140" width="230" height="170" rx="14" fill="#f97316"/>
+  <text x="460" y="175" fill="#0f172a" font-size="20" font-weight="700" text-anchor="middle">ROUTEUR</text>
+  <text x="460" y="198" fill="#0f172a" font-size="13" text-anchor="middle">Ubuntu Server 26.04 ARM64</text>
+  <text x="460" y="230" fill="#0f172a" font-size="13" text-anchor="middle">nftables (NAT masquerade)</text>
+  <text x="460" y="250" fill="#0f172a" font-size="13" text-anchor="middle">dnsmasq (DHCP + DNS)</text>
+  <text x="460" y="270" fill="#0f172a" font-size="13" text-anchor="middle">ip_forward = 1</text>
+  <text x="460" y="295" fill="#0f172a" font-size="12" text-anchor="middle">1 vCPU · 1 Go RAM</text>
+
+  <!-- Links -->
+  <line x1="240" y1="200" x2="345" y2="200" stroke="#38bdf8" stroke-width="3"/>
+  <text x="292" y="186" fill="#38bdf8" font-size="12" text-anchor="middle">enp0s8</text>
+  <text x="292" y="222" fill="#38bdf8" font-size="12" text-anchor="middle">10.0.2.15</text>
+
+  <line x1="575" y1="225" x2="680" y2="225" stroke="#4ade80" stroke-width="3"/>
+  <text x="628" y="211" fill="#4ade80" font-size="12" text-anchor="middle">enp0s9</text>
+  <text x="628" y="247" fill="#4ade80" font-size="12" text-anchor="middle">192.168.10.1</text>
+
+  <!-- Client -->
+  <rect x="680" y="160" width="220" height="130" rx="12" fill="#334155" stroke="#4ade80"/>
+  <text x="790" y="192" fill="#f8fafc" font-size="17" font-weight="700" text-anchor="middle">Poste Ubuntu</text>
+  <text x="790" y="218" fill="#cbd5e1" font-size="13" text-anchor="middle">192.168.10.107 (DHCP)</text>
+  <text x="790" y="240" fill="#cbd5e1" font-size="13" text-anchor="middle">passerelle 192.168.10.1</text>
+  <text x="790" y="262" fill="#cbd5e1" font-size="13" text-anchor="middle">DNS 192.168.10.1</text>
+
+  <text x="785" y="340" fill="#94a3b8" font-size="12" text-anchor="middle">Plage DHCP : .100 → .200 (bail 12 h)</text>
+  <text x="480" y="400" fill="#64748b" font-size="11" text-anchor="middle">Hôte : Mac M2 · VirtualBox · réseau interne LAN-BSGRAPH</text>
+</svg>
