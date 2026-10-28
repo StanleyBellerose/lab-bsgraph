@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" font-family="Helvetica, Arial, sans-serif">
+  <rect width="960" height="470" fill="#0f172a"/>
+  <text x="480" y="40" fill="#f8fafc" font-size="22" font-weight="700" text-anchor="middle">BSGRAPH Studio — Étape 3 : annuaire Active Directory</text>
+
+  <rect x="30" y="80" width="200" height="340" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text x="130" y="108" fill="#94a3b8" font-size="13" text-anchor="middle" letter-spacing="2">WAN</text>
+  <ellipse cx="130" cy="240" rx="75" ry="40" fill="#334155" stroke="#64748b"/>
+  <text x="130" y="246" fill="#f8fafc" font-size="18" font-weight="700" text-anchor="middle">Internet</text>
+
+  <rect x="290" y="80" width="640" height="340" rx="14" fill="#1e293b" stroke="#334155"/>
+  <text x="610" y="108" fill="#94a3b8" font-size="13" text-anchor="middle" letter-spacing="2">LAN-BSGRAPH · 192.168.10.0/24 · domaine bsgraph.local</text>
+
+  <!-- Router -->
+  <rect x="310" y="180" width="190" height="120" rx="12" fill="#f97316"/>
+  <text x="405" y="210" fill="#0f172a" font-size="18" font-weight="700" text-anchor="middle">ROUTEUR</text>
+  <text x="405" y="232" fill="#0f172a" font-size="13" text-anchor="middle">192.168.10.1</text>
+  <text x="405" y="256" fill="#0f172a" font-size="12" text-anchor="middle">NAT · DHCP</text>
+  <text x="405" y="276" fill="#0f172a" font-size="12" text-anchor="middle">annonce DNS = DC01</text>
+  <line x1="205" y1="240" x2="310" y2="240" stroke="#38bdf8" stroke-width="3"/>
+
+  <!-- DC01 -->
+  <rect x="580" y="130" width="320" height="150" rx="12" fill="#a78bfa"/>
+  <text x="740" y="160" fill="#0f172a" font-size="18" font-weight="700" text-anchor="middle">DC01 · contrôleur de domaine</text>
+  <text x="740" y="182" fill="#0f172a" font-size="13" text-anchor="middle">192.168.10.10 (fixe) · Samba AD</text>
+  <text x="740" y="206" fill="#0f172a" font-size="12" text-anchor="middle">Kerberos (BSGRAPH.LOCAL) · LDAP</text>
+  <text x="740" y="226" fill="#0f172a" font-size="12" text-anchor="middle">DNS interne → forwarder 192.168.10.1</text>
+  <text x="740" y="252" fill="#0f172a" font-size="12" text-anchor="middle">Groupes : Direction · Creation · Compta</text>
+  <text x="740" y="270" fill="#0f172a" font-size="12" text-anchor="middle">5 salariés + stanley.admin</text>
+
+  <!-- Client -->
+  <rect x="580" y="310" width="320" height="90" rx="12" fill="#334155" stroke="#4ade80"/>
+  <text x="740" y="340" fill="#f8fafc" font-size="17" font-weight="700" text-anchor="middle">Poste Ubuntu</text>
+  <text x="740" y="362" fill="#cbd5e1" font-size="13" text-anchor="middle">IP par DHCP · DNS 192.168.10.10</text>
+  <text x="740" y="382" fill="#cbd5e1" font-size="12" text-anchor="middle">résout dc01.bsgraph.local</text>
+
+  <line x1="500" y1="230" x2="580" y2="205" stroke="#4ade80" stroke-width="3"/>
+  <line x1="500" y1="260" x2="580" y2="350" stroke="#4ade80" stroke-width="3"/>
+  <line x1="740" y1="280" x2="740" y2="310" stroke="#a78bfa" stroke-width="3" stroke-dasharray="6 4"/>
+  <text x="752" y="300" fill="#a78bfa" font-size="11">requêtes DNS</text>
+
+  <text x="480" y="450" fill="#64748b" font-size="11" text-anchor="middle">Hôte : Mac M2 · VirtualBox · ROUTEUR 1 Go · DC01 1,5 Go · poste Ubuntu</text>
+</svg>

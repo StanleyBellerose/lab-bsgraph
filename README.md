@@ -16,7 +16,7 @@ Je construis de A à Z l'infrastructure d'une agence fictive, **BSGRAPH Studio**
 |---|---|---|---|
 | 1 | Serveur Linux de base | Ubuntu | ✅ |
 | 2 | [Routeur, NAT, DHCP, DNS](etape-02-routeur/) | Ubuntu Server, nftables, dnsmasq, Netplan | ✅ |
-| 3 | Annuaire du domaine `bsgraph.local` | Samba AD | ⏳ |
+| 3 | [Annuaire du domaine `bsgraph.local`](etape-03-annuaire-samba-ad/) | Samba AD, Kerberos, DNS | ✅ |
 | 4 | Poste client joint au domaine | Windows 11 ARM | ⏳ |
 | 5 | Serveur de fichiers, droits par service | Samba | ⏳ |
 | 6 | Serveur web + administration SSH | Nginx, OpenSSH | ⏳ |

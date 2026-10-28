@@ -1,0 +1,3 @@
+# /etc/hosts (DC01) : extrait, nom complet du contrôleur de domaine
+127.0.0.1 localhost
+192.168.10.10 dc01.bsgraph.local dc01
